@@ -1,0 +1,29 @@
+cask "peeker" do
+  version "1.0.0"
+  sha256 "2126b39131f31686ddd2d5dab0ec617f48fa95cfdb3d78a3c8034caf95565a96"
+
+  url "https://github.com/SCPZ24/Peeker/releases/download/v#{version}/Peeker-v#{version}.zip"
+  name "Peeker"
+  desc "Low-distraction timer and daily progress island"
+  homepage "https://github.com/SCPZ24/Peeker"
+
+  depends_on arch: :arm64
+  depends_on macos: :tahoe
+
+  app "Peeker.app"
+
+  zap trash: [
+    "~/Library/Application Support/Peeker",
+    "~/Library/Preferences/com.scpz24.Peeker.plist",
+  ]
+
+  caveats <<~EOS
+    Peeker is ad-hoc signed and distributed without Apple notarization.
+    Peeker 使用 ad-hoc 签名，未经过 Apple 公证。
+
+    After the first blocked launch, open System Settings > Privacy & Security,
+    choose Open Anyway for Peeker, then confirm Open. Do not disable Gatekeeper.
+    首次启动被拦截后，请打开“系统设置 → 隐私与安全”，为 Peeker 选择
+    “仍要打开”，再确认“打开”。无需也不应关闭 Gatekeeper。
+  EOS
+end
