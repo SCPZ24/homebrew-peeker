@@ -1,6 +1,6 @@
 cask "peeker" do
-  version "1.0.0"
-  sha256 "2126b39131f31686ddd2d5dab0ec617f48fa95cfdb3d78a3c8034caf95565a96"
+  version "1.0.1"
+  sha256 "c6d6dbeb1648ea42bf80969a3d41e6a6bedf2ad8b1d885de7c8bc316e2d31119"
 
   url "https://github.com/SCPZ24/Peeker/releases/download/v#{version}/Peeker-v#{version}.zip"
   name "Peeker"
