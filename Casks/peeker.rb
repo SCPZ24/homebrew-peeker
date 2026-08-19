@@ -1,16 +1,19 @@
+# frozen_string_literal: true
+
 cask "peeker" do
-  version "1.0.4"
-  sha256 "838755d29d7f28c93f67cc05259048697cd7e8d4fc7f35793ae3121f8fc4150e"
+  version "2.0.0"
+  sha256 "c6cd6236d898eacbacf092730d7d0402b96ef886b1f98cc49232358471ebf786"
 
   url "https://github.com/SCPZ24/Peeker/releases/download/v#{version}/Peeker-v#{version}.zip"
   name "Peeker"
-  desc "Low-distraction timer and daily progress island"
+  desc "Local productivity island with Timer, Pusher, Scheduler, and CLI"
   homepage "https://github.com/SCPZ24/Peeker"
 
   depends_on arch: :arm64
   depends_on macos: :tahoe
 
   app "Peeker.app"
+  binary "#{appdir}/Peeker.app/Contents/MacOS/peeker-cli", target: "peeker"
 
   zap trash: [
     "~/Library/Application Support/Peeker",
