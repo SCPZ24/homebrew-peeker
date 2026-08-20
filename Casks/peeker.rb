@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 cask "peeker" do
-  version "2.0.0"
-  sha256 "c6cd6236d898eacbacf092730d7d0402b96ef886b1f98cc49232358471ebf786"
+  version "2.0.1"
+  sha256 "32da942633bb16964785b6a1446fccc4075720114e7291e1eed6d8ae86793b40"
 
   url "https://github.com/SCPZ24/Peeker/releases/download/v#{version}/Peeker-v#{version}.zip"
   name "Peeker"
